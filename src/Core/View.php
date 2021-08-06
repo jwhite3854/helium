@@ -58,9 +58,10 @@ class View
     public function assets(string $uri): string
     {
         $domain = Helium::getConfig('domain');
+        $redirect_base = Helium::getConfig('redirect_base');
         $asset_dir = Helium::getConfig('asset_dir');
 
-        return $domain . DS . $asset_dir . DS . trim( $uri, DS );
+        return $domain . DS . $redirect_base . $asset_dir . DS . trim( $uri, DS );
     }
 
     public function title(): string
