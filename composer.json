@@ -1,0 +1,11 @@
+{
+    "autoload": {
+        "psr-4": {
+            "Helium\\": "src/"
+        },
+        "files": ["config/configs.php", "config/routes.php"]
+    },
+    "require": {
+        "ext-json": "*"
+    }
+}

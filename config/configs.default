@@ -1,0 +1,15 @@
+<?php
+
+namespace HeliumConfig;
+
+class Configs
+{
+    const all = [
+        'domain' => '',
+        'redirect_base' => '',
+        'asset_dir' => '',
+        'file_base' => '',
+        'app_title' => '',
+        'dev_mode' => true,
+    ];
+}

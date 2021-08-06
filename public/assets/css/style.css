@@ -1,0 +1,50 @@
+.jw-cardh, .jw-cardd, .jw-cards, .jw-cardc{
+    width: 32px;
+    height: 44px;
+    display: inline-block;
+    text-align: center;
+    border: #000 1px solid;
+    border-radius: 3px;
+    font-size: 20px;
+    color: #000;
+    margin-right: 4px;
+}
+
+.jw-cardh, .jw-cardd {
+    color: #f00;
+    border-color: #f00;
+}
+
+.hide-cards > div {
+    color: #333;
+    background-color: #333;
+    border-color: #222;
+}
+
+.jw-cardc::after {
+    content: '\2663';
+    font-size: 25px;
+}
+
+.jw-cardd::after {
+    content: '\2666';
+    font-size: 25px;
+}
+
+.jw-cardh::after {
+    content: '\2665';
+    font-size: 25px;
+}
+
+.jw-cards::after {
+    content: '\2660';
+    font-size: 25px;
+}
+
+.uk-radio {
+    margin-left: 12px;
+}
+
+label:nth-child(1) > input.uk-radio {
+    margin-left: 0;
+}

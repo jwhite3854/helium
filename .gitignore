@@ -1,0 +1,14 @@
+.idea
+
+config/*
+!config/.htaccess
+!config/configs.default
+!config/routes.default
+
+public/assets/data/*
+!assets/data/.gitkeep
+
+public/images/*
+!images/.htaccess
+
+vendor

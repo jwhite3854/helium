@@ -1,0 +1,10 @@
+<?php
+
+namespace HeliumConfig;
+
+class Routes
+{
+    const default = [
+        'index' => true,
+    ];
+}
