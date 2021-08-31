@@ -1,7 +1,7 @@
 <nav class="uk-navbar uk-navbar-container uk-margin">
     <div class="uk-navbar-left uk-margin-left">
         <ul class="uk-navbar-nav">
-            <li><a href="/">HOME</a></li>
+            <li><a href="<?php echo $this->url('') ?>">HOME</a></li>
         </ul>
     </div>
     <div class="uk-navbar-right uk-margin-right">
