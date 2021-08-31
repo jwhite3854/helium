@@ -14,7 +14,7 @@ class View
      * @param $data
      * @param $path
      */
-    public function __construct( &$data, $path )
+    public function __construct( $data, $path )
     {
         $viewPath = 'src' . DS . 'views' . DS . $path;
         if( file_exists($viewPath) ) {
@@ -26,7 +26,6 @@ class View
 
     public function render()
     {
-        $data = &$this -> data;
         if ( !empty( $this->path ) ) {
             ob_start();
             require $this->path;
