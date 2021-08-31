@@ -4,12 +4,12 @@ namespace Helium\Core;
 
 class Controller
 {
-    protected $data;
     protected $model;
     protected $action;
     protected $params;
 
     protected $head;
+    protected $data;
 
     /**
      * Controller constructor.
@@ -56,8 +56,6 @@ class Controller
             $metaData = $layoutData['meta'];
         }
 
-
-
         //Layout Paths
         $layoutPath = 'layout.php';
         $layoutNavPath = 'nav.php';
@@ -68,8 +66,8 @@ class Controller
 
         //Create Meta / Nav / Footer / Body Views Instances
         $bodyView = new View( $data, $bodyLayoutPath );
-        $navView = new View( $navData, $layoutNavPath );
-        $footerView = new View( $footerData, $layoutFooterPath );
+        $navView = new View( [], $layoutNavPath );
+        $footerView = new View( [], $layoutFooterPath );
         $metaView = new View( $metaData, $layoutMetaPath );
 
         //Creates an array that contains layouts required data 
@@ -81,7 +79,6 @@ class Controller
             'more_stylesheets' => $moreStylesheets, 
             'more_scripts' => $moreScripts, 
         );
-
 
         //Render Full Layout
         $layoutView = new View($renderData, $layoutPath);
@@ -96,7 +93,7 @@ class Controller
 
     public function redirect( $uri, $params = array() )
     {
-        $view = new View($data, null);
+        $view = new View([], null);
         header( 'Location: ' . $view->url( $uri, $params ) );
     }
 }

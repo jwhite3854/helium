@@ -58,10 +58,11 @@ class Helium
             if( file_exists( $controllerPath ) ) {
                 require $controllerPath;
                 // Does the controller class exist?
-                $controllerClassName = 'Helium\Controller\\' . $controllerName.'Controller';
+                $controllerClassName = 'Helium\controllers\\' . $controllerName;
                 if ( class_exists( $controllerClassName ) ) {
                     // Create the new controller class with the action and parameters
-                    $controllerObject = new $controllerClassName( $controllerName, $actionName, $params );
+                    $modelName = str_replace('Controller', '', $controllerName);
+                    $controllerObject = new $controllerClassName($modelName, $actionName, $params );
                     if ( method_exists($controllerObject, $actionName) ) {
                         // Get the output of the controller of the given action with the params provided
                         $controllerOutput = $controllerObject->$actionName( $params );

@@ -83,7 +83,7 @@ class Router
      */
     public function getController()
     {
-        return $this->controller;
+        return $this->controller.'Controller';
     }
 
     /**

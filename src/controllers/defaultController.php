@@ -1,6 +1,6 @@
 <?php
 
-namespace Helium\Controller;
+namespace Helium\controllers;
 
 use Helium\Core\Controller;
 use Helium\Helium;
@@ -11,27 +11,6 @@ class defaultController extends Controller
     {
         $layoutData = $this->generateGenericTitle($_SERVER["REQUEST_URI"]);
     
-        return $this->render([], $layoutData, [], []);
-    }
-
-    public function charts(): string
-    {
-        $layoutData = $this->generateGenericTitle($_SERVER["REQUEST_URI"]);
-
-        return $this->render([], $layoutData, [], []);
-    }
-
-    public function outs(): string
-    {
-        $layoutData = $this->generateGenericTitle($_SERVER["REQUEST_URI"]);
-
-        return $this->render([], $layoutData, [], []);
-    }
-
-    public function table(): string
-    {
-        $layoutData = $this->generateGenericTitle($_SERVER["REQUEST_URI"]);
-
         return $this->render([], $layoutData, [], []);
     }
 
