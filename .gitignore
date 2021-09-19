@@ -1,4 +1,5 @@
 .idea
+.data
 
 config/*
 !config/.htaccess
@@ -12,3 +13,4 @@ public/images/*
 !images/.htaccess
 
 vendor
+composer.phar
